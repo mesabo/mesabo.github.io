@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Messou Franck Junior Aboya — PhD researcher at Hosei University YuLab, working on AI/LLM methods for smart-grid stability and IoT systems. Also full-stack and AI/backend engineer." />
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+<link rel="alternate icon" type="image/png" href="/assets/photo.png" />
+<link rel="apple-touch-icon" href="/assets/photo.png" />
+<meta property="og:type" content="profile" />
+<meta property="og:site_name" content="Messou Franck Junior Aboya" />
+<meta property="og:title" content="Messou Franck Junior Aboya — PhD researcher (Hosei YuLab) · AI / Backend / Full-stack engineer" />
+<meta property="og:description" content="AI / sLM / LLM methods for smart-grid stability and IoT systems. 2 Q1 journal papers, 5 IEEE flagship first-author papers, IEEE VTS 2024 Student Paper Award." />
+<meta property="og:url" content="https://mesabo.github.io/" />
+<meta property="og:image" content="https://mesabo.github.io/assets/photo.png" />
+<meta property="og:image:alt" content="Messou Franck Junior Aboya" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Messou Franck Junior Aboya — PhD researcher · Engineer" />
+<meta name="twitter:description" content="AI / sLM / LLM for smart-grid stability and IoT systems. Hosei University YuLab." />
+<meta name="twitter:image" content="https://mesabo.github.io/assets/photo.png" />
+<script>
+  // set theme before paint to avoid flash
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="/mysite.css" type="text/css" />
+<title>自己紹介 · Messou Franck Junior Aboya</title>
+</head>
+<body>
+<button id="theme-toggle" type="button" aria-label="Toggle light / dark theme" title="Toggle light / dark">
+  <span class="theme-icon-light">☀</span>
+  <span class="theme-icon-dark">☾</span>
+</button>
+<script>
+  (function () {
+    var btn = document.getElementById('theme-toggle');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        var cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        var next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    }
+    // tag <body> with the current page slug (drives the top accent band)
+    var current = document.querySelector('.menu-item a.current');
+    if (current) {
+      var href = (current.getAttribute('href') || '').replace('.html', '').replace(/[^a-z0-9]/gi, '');
+      if (href) document.body.classList.add('page-' + href);
+    }
+  })();
+</script>
+<div id="layout-menu">
+<div id="layout-menu-inner">
+<div class="menu-category">プロフィール</div>
+<div class="menu-item"><a href="index.html" class="current">自己紹介</a></div>
+<div class="menu-item"><a href="publications.html">出版物</a></div>
+<div class="menu-item"><a href="research.html">研究</a></div>
+<div class="menu-item"><a href="experiences.html">経歴</a></div>
+<div class="menu-item"><a href="awards.html">受賞</a></div>
+<div class="menu-item"><a href="other.html">その他</a></div>
+<div class="menu-category">連絡先</div>
+<div class="menu-item"><a href="https://github.com/mesabo" target="_blank" rel="noopener">GitHub</a></div>
+<div class="menu-item"><a href="https://www.linkedin.com/in/mesabo/" target="_blank" rel="noopener">LinkedIn</a></div>
+<div class="menu-item"><a href="https://scholar.google.com/citations?user=tHBBTIEAAAAJ" target="_blank" rel="noopener">Google&nbsp;Scholar</a></div>
+<div class="menu-item"><a href="mailto:mesabo18@gmail.com" target="_blank" rel="noopener">Email</a></div>
+<div class="menu-category">言語</div>
+<div class="menu-item"><a href="../index.html">🇬🇧&nbsp;English</a></div>
+<div class="menu-item"><a href="../fr/index.html">🇫🇷&nbsp;Français</a></div>
+<div class="menu-item"><a href="index.html" class="current">🇯🇵&nbsp;日本語</a></div>
+</div>
+</div>
+<main id="layout-content">
+<div id="toptitle" class="hide-on-index">
+<h1>自己紹介</h1>
+</div>
+<script>document.body.classList.add('page-index');</script>
+<div class="hero">
+  <img src="/assets/photo.png" alt="Messou Franck Junior Aboya" class="avatar" />
+  <div class="hero-text">
+    <h1 class="hero-name">メス　フランク　ジュニア　アボヤ</h1>
+    <p class="hero-romaji">Messou Franck Junior Aboya</p>
+    <p class="title">博士課程 &middot; 応用情報工学</p>
+    <p class="affiliation">
+      理工学研究科 &middot; <strong><a href="https://iist.hosei.ac.jp/2025/10/20/associate-professor-keping-yu-recognized-as-one-of-the-worlds-top-2-scientists-by-stanford-university-and-elsevier-2025-edition/" target="_blank" rel="noopener">YuLab</a></strong><br />
+      <a href="https://www.hosei.ac.jp" target="_blank" rel="noopener">法政大学</a> &middot;
+      <a href="https://iist.hosei.ac.jp" target="_blank" rel="noopener">IIST 小金井キャンパス</a>, 東京
+    </p>
+    <div class="facet-tags">
+      <span>研究者</span>
+      <span>AI / バックエンド エンジニア</span>
+      <span>フルスタック エンジニア</span>
+    </div>
+  </div>
+</div>
+<p>法政大学 大学院 理工学研究科 応用情報工学専攻 YuLab（IIST 小金井キャンパス）の博士課程に在籍しています。研究テーマは、<b>AI</b>・<b>小型／大規模言語モデル（sLM／LLM）</b>・<b>IoT</b> を活用したスマートグリッドおよび IoT システムの安定性・耐障害性向上であり、時系列予測、スペクトル再プログラミング、グラフベース制御を中心に取り組んでいます。学習および推論はすべて、自身が構築・運用する専用のマルチ GPU サーバ上で実行しています。
+</p>
+<p>研究のかたわら、本番環境向けの <b>AI／バックエンド システム</b>や、<b>Web・モバイル フルスタック アプリケーション</b>の開発にも従事しており、日本・湾岸諸国・西アフリカのパートナーと連携しています。
+</p>
+<h2>研究分野</h2>
+<ul>
+<li><p>電力系統安定性とスマートグリッド耐障害性向けの AI <i> sLM </i> LLM 手法
+</p>
+</li>
+<li><p>時系列タスク向け、凍結 <b>小型言語モデル（sLM）</b>・LLM のスペクトル再プログラミング
+</p>
+</li>
+<li><p>分散型エネルギー資源向けの <b>IoT</b> およびエッジ知能
+</p>
+</li>
+<li><p>エネルギー ディスパッチと通信ルーティングの協調最適化
+</p>
+</li>
+<li><p>電力ネットワーク トポロジーへの GNN 適用
+</p>
+</li>
+<li><p>IoT エッジ機器を跨ぐ連合学習・知識蒸留
+</p>
+</li>
+</ul>
+<h2>エンジニアリング分野</h2>
+<ul>
+<li><p><b>専用 GPU サーバ</b>上の本番 ML パイプライン（学習・推論・デプロイ）
+</p>
+</li>
+<li><p><b>IoT</b> データ取り込みとエッジ モデル デプロイ
+</p>
+</li>
+<li><p>Python（Flask）／Node.js による REST／GraphQL バックエンド
+</p>
+</li>
+<li><p>データ層: MongoDB／SQL
+</p>
+</li>
+<li><p>フロントエンド（React）およびモバイル（Flutter／Dart）
+</p>
+</li>
+</ul>
+<h2>主な実績</h2>
+<ul>
+<li><p>2026 年に <b>Q1 ジャーナル論文 2 本</b>（<a href="https://www.sciencedirect.com/journal/internet-of-things" target="_blank" rel="noopener">Internet of Things</a>, IF 7.6 ／ <a href="https://www.sciencedirect.com/journal/expert-systems-with-applications" target="_blank" rel="noopener">Expert Systems with Applications</a>, IF 7.5）— <b>IoT</b> 時系列および <b>sLM</b> ベース予測。
+</p>
+</li>
+<li><p>IEEE フラッグシップ国際会議（VTC、ICUFN、ICCE、ICC）で <b>第一著者論文 5 本</b>。
+</p>
+</li>
+<li><p><b>★ IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award</b>（VTC2024-Fall、Washington D.C.）。
+</p>
+</li>
+<li><p><i>Theoretical Computer Science</i>（Elsevier）レビュアー、IEEE ICECET 2026 査読委員（IEEE Italy Section）。
+</p>
+</li>
+<li><p>専用 GPU サーバ上で <b>PEGASE 2,869 母線</b>までのベンチマークによるスマートグリッド協調最適化検証。
+</p>
+</li>
+</ul>
+<h2>各ページへ</h2>
+<ul>
+<li><p><a href="publications.html" target="_blank" rel="noopener">出版物</a> &#8201;&mdash;&#8201; Q1 ジャーナル 2 本 + IEEE フラッグシップ会議 8 本
+</p>
+</li>
+<li><p><a href="research.html" target="_blank" rel="noopener">研究</a> &#8201;&mdash;&#8201; 進行中の博士プロジェクト + スペクトル再プログラミング軸
+</p>
+</li>
+<li><p><a href="experiences.html" target="_blank" rel="noopener">経歴</a> &#8201;&mdash;&#8201; キャリアと CV ダウンロード（AI <i> SE、英 </i> 日）
+</p>
+</li>
+<li><p><a href="awards.html" target="_blank" rel="noopener">受賞</a> &#8201;&mdash;&#8201; VTS 2024 学生論文賞、査読委員等
+</p>
+</li>
+<li><p><a href="other.html" target="_blank" rel="noopener">その他</a> &#8201;&mdash;&#8201; オープンソース、メンタリング、出張・写真
+</p>
+</li>
+</ul>
+</main>
+<footer id="site-footer">
+  <span>Updated <span class="build-date">2026-05</span></span>
+  <span class="footer-sep">·</span>
+  <span><a href="https://github.com/mesabo/profile">source</a></span>
+  <span class="footer-sep">·</span>
+  <span>built with <a href="http://jemdoc.jaboc.net/">jemdoc</a></span>
+</footer>
+</body>
+</html>

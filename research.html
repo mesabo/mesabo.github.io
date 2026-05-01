@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Messou Franck Junior Aboya — PhD researcher at Hosei University YuLab, working on AI/LLM methods for smart-grid stability and IoT systems. Also full-stack and AI/backend engineer." />
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+<link rel="alternate icon" type="image/png" href="/assets/photo.png" />
+<link rel="apple-touch-icon" href="/assets/photo.png" />
+<meta property="og:type" content="profile" />
+<meta property="og:site_name" content="Messou Franck Junior Aboya" />
+<meta property="og:title" content="Messou Franck Junior Aboya — PhD researcher (Hosei YuLab) · AI / Backend / Full-stack engineer" />
+<meta property="og:description" content="AI / sLM / LLM methods for smart-grid stability and IoT systems. 2 Q1 journal papers, 5 IEEE flagship first-author papers, IEEE VTS 2024 Student Paper Award." />
+<meta property="og:url" content="https://mesabo.github.io/" />
+<meta property="og:image" content="https://mesabo.github.io/assets/photo.png" />
+<meta property="og:image:alt" content="Messou Franck Junior Aboya" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Messou Franck Junior Aboya — PhD researcher · Engineer" />
+<meta name="twitter:description" content="AI / sLM / LLM for smart-grid stability and IoT systems. Hosei University YuLab." />
+<meta name="twitter:image" content="https://mesabo.github.io/assets/photo.png" />
+<script>
+  // set theme before paint to avoid flash
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="/mysite.css" type="text/css" />
+<title>Research · Messou Franck Junior Aboya</title>
+</head>
+<body>
+<button id="theme-toggle" type="button" aria-label="Toggle light / dark theme" title="Toggle light / dark">
+  <span class="theme-icon-light">☀</span>
+  <span class="theme-icon-dark">☾</span>
+</button>
+<script>
+  (function () {
+    var btn = document.getElementById('theme-toggle');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        var cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        var next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    }
+    // tag <body> with the current page slug (drives the top accent band)
+    var current = document.querySelector('.menu-item a.current');
+    if (current) {
+      var href = (current.getAttribute('href') || '').replace('.html', '').replace(/[^a-z0-9]/gi, '');
+      if (href) document.body.classList.add('page-' + href);
+    }
+  })();
+</script>
+<div id="layout-menu">
+<div id="layout-menu-inner">
+<div class="menu-category">profile</div>
+<div class="menu-item"><a href="index.html">About&nbsp;me</a></div>
+<div class="menu-item"><a href="publications.html">Publications</a></div>
+<div class="menu-item"><a href="research.html" class="current">Research</a></div>
+<div class="menu-item"><a href="experiences.html">Experiences</a></div>
+<div class="menu-item"><a href="awards.html">Awards</a></div>
+<div class="menu-item"><a href="other.html">Other</a></div>
+<div class="menu-category">contact</div>
+<div class="menu-item"><a href="https://github.com/mesabo" target="_blank" rel="noopener">GitHub</a></div>
+<div class="menu-item"><a href="https://www.linkedin.com/in/mesabo/" target="_blank" rel="noopener">LinkedIn</a></div>
+<div class="menu-item"><a href="https://scholar.google.com/citations?user=tHBBTIEAAAAJ" target="_blank" rel="noopener">Google&nbsp;Scholar</a></div>
+<div class="menu-item"><a href="mailto:mesabo18@gmail.com" target="_blank" rel="noopener">Email</a></div>
+<div class="menu-category">language</div>
+<div class="menu-item"><a href="index.html">🇬🇧&nbsp;English</a></div>
+<div class="menu-item"><a href="fr/index.html">🇫🇷&nbsp;Français</a></div>
+<div class="menu-item"><a href="ja/index.html">🇯🇵&nbsp;日本語</a></div>
+</div>
+</div>
+<main id="layout-content">
+<div id="toptitle" class="hide-on-index">
+<h1>Research</h1>
+</div>
+<p>I work at the intersection of <b>power-system control theory</b>, <b>deep learning</b> (graph neural networks, <b>small <i> large language models &#8201;&mdash;&#8201; sLM </i> LLM</b>), <b>IoT systems</b>, and <b>grid cybersecurity</b>. Most of my output focuses on time-series problems on energy and IoT data: forecasting, imputation, and anomaly detection. Validation scales from textbook benchmarks to real PMU field data, with all training and inference run on dedicated multi-GPU servers I configure and maintain end-to-end.
+</p>
+<h2>Research areas</h2>
+<ul>
+<li><p>AI <i> sLM </i> LLM methods for power-system stability and smart-grid resilience
+</p>
+</li>
+<li><p>Spectral reprogramming of frozen <b>small language models (sLM)</b> and LLMs for time-series tasks
+</p>
+</li>
+<li><p>IoT and edge intelligence for distributed energy resources
+</p>
+</li>
+<li><p>Multi-impairment communication-network co-design (delay, packet loss, jitter)
+</p>
+</li>
+<li><p>Graph neural networks over electrical-grid topologies
+</p>
+</li>
+<li><p>Federated learning and knowledge distillation across IoT-edge devices
+</p>
+</li>
+<li><p>SCADA anomaly detection on real PMU field data
+</p>
+</li>
+<li><p>Dual-domain (spectral + temporal) representation learning
+</p>
+</li>
+<li><p>Dedicated GPU-server infrastructure: cluster provisioning, multi-GPU training, inference deployment
+</p>
+</li>
+</ul>
+<h2>Recent research &#8201;&mdash;&#8201; <b>Smart-grid co-optimization with LLM-driven anomaly detection</b></h2>
+<p>A unified co-optimization framework for smart-grid dispatch and communication routing with formal stability guarantees and <b>small-language-model (sLM)</b> based SCADA anomaly detection. The framework treats the grid as an <b>IoT-instrumented</b> system: PMU streams, edge gateways, and SCADA endpoints are first-class data sources. All training and inference run on a dedicated multi-GPU server in the YuLab. This is the active doctoral project (2025 onwards).
+</p>
+<a class="inline-fig" href="/assets/phd/all.png" target="_blank" rel="noopener"><img src="/assets/phd/all.png" alt="Doctoral framework — overview of the three pillars" loading="lazy" /></a>
+<h3>Three pillars</h3>
+<ol>
+<li><p><b>Formal delay-stability coupling bounds.</b> Closed-form stability bounds where delay-margin coupling is <b>learned</b> per generator from operational data.
+</p>
+</li>
+</ol>
+<a class="inline-fig" href="/assets/phd/year1.png" target="_blank" rel="noopener"><img src="/assets/phd/year1.png" alt="Year 1 — formal delay-stability coupling bounds" loading="lazy" /></a>
+<details class="more"><summary>Method &amp; expected validation</summary>
+<div class="more-body">
+<p>Built on a <strong>dual-domain graph neural network</strong> operating jointly in the spectral domain (Laplacian eigenstructure of the grid) and the temporal domain (PMU time-series), producing per-generator coupling parameters whose physical interpretability is preserved by an additive decomposition.</p>
+<p><strong>Expected validation targets.</strong> Stability margin error within 5% of analytical baselines on IEEE 14, 30, 57, 118-bus benchmarks; runtime under 200 ms per evaluation on a single workstation GPU.</p>
+</div>
+</details>
+<ol>
+<li><p><b>Multi-impairment stability analysis.</b> Generalises the delay-only bound to compound impairments (delay <tt> packet loss </tt> jitter), each as a physically interpretable additive component.
+</p>
+</li>
+</ol>
+<a class="inline-fig" href="/assets/phd/year2.png" target="_blank" rel="noopener"><img src="/assets/phd/year2.png" alt="Year 2 — multi-impairment stability analysis" loading="lazy" /></a>
+<details class="more"><summary>Method &amp; expected validation</summary>
+<div class="more-body">
+<p>A margin-erosion decomposition maps each impairment to an additive component with learned per-generator weights, enabling per-component sensitivity analysis without losing physical interpretability.</p>
+<p><strong>Expected validation targets.</strong> Bound tightness under +/-20% impairment perturbation across 8 power-system benchmarks up to <strong>PEGASE 2,869-bus</strong>; full reproducibility on public OpenDSS and pandapower test cases.</p>
+</div>
+</details>
+<ol>
+<li><p><b>SLM-based SCADA anomaly prediction.</b> Predicts impairment trajectories from SCADA / PMU streams to trigger preventive dispatch before stability margins are breached.
+</p>
+</li>
+</ol>
+<a class="inline-fig" href="/assets/phd/year3.png" target="_blank" rel="noopener"><img src="/assets/phd/year3.png" alt="Year 3 — sLM-based SCADA anomaly prediction" loading="lazy" /></a>
+<details class="more"><summary>Method &amp; expected validation</summary>
+<div class="more-body">
+<p>Built on the spectrally-reprogrammed <strong>small-language-model (sLM)</strong> pipeline of Spec2LLM and LLM4Imp, operating on tokenised PMU windows from IoT-edge gateways. A control loop couples the prediction to the dispatch optimiser of pillar&nbsp;1. Inference is colocated on the same dedicated GPU server as training, with the aim of keeping latency under the 30&nbsp;s leading-time target.</p>
+<p><strong>Expected validation targets.</strong> Anomaly leading-time of at least 30 s before the empirical instability threshold on real PMU field data, with a false-alarm rate under 5%.</p>
+</div>
+</details>
+<h2>Secondary track &#8201;&mdash;&#8201; <b>Spectral reprogramming of language models for time-series</b></h2>
+<p>A frozen language model &#8201;&mdash;&#8201; <b>sLM</b> or LLM &#8201;&mdash;&#8201; reprogrammed with frequency-domain prompts, generalises across forecasting, imputation and anomaly tasks on energy and <b>IoT time-series</b> without per-task fine-tuning. Training runs on dedicated GPU servers; the <b>sLM</b> variants are explicitly designed so inference can be deployed close to IoT-edge gateways.
+</p>
+<ul>
+<li><p><b>Spec2Llama</b> &#8201;&mdash;&#8201; <i>Expert Systems with Applications</i>, IF 7.5, JCR Q1, 2026.
+</p>
+</li>
+<li><p><b>Spec2LLM</b> &#8201;&mdash;&#8201; IEEE ICCE 2026, Dubai.
+</p>
+</li>
+<li><p><b>LLM4Imp</b> &#8201;&mdash;&#8201; IEEE ICC 2026, Glasgow.
+</p>
+</li>
+</ul>
+<details class="more"><summary>How the pipeline evolved</summary>
+<div class="more-body">
+<p><strong>Spec2Llama</strong> introduced the spectral-aware forecasting frame: time-series tokens are projected into a learned frequency representation that prompts a frozen Llama backbone, enabling versatile time-series analysis across heterogeneous datasets without per-task fine-tuning.</p>
+<p><strong>Spec2LLM</strong> applied the same idea to power-transformer temperature forecasting, with a tighter spectral-to-language token coupling and validation on grid-equipment monitoring data.</p>
+<p><strong>LLM4Imp</strong> extended the pipeline to time-series imputation under heavy missing-data regimes (long gaps, irregular sampling) by reformulating imputation as a frequency-domain prompt completion task.</p>
+<p>This pipeline is the foundation for pillar 3 of the doctoral project (SLM-based SCADA anomaly prediction).</p>
+</div>
+</details>
+<h2>Other featured projects</h2>
+<div class="paper-grid">
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/tapformer_iot_2026.pdf" target="_blank" rel="noopener" aria-label="Open TAPformer architecture in new tab"><img src="/assets/papers/tapformer_iot_2026.png" alt="TAPformer architecture" loading="lazy" /></a>
+    <h3>TAPformer</h3>
+    <p class="venue">Internet of Things (Elsevier) &middot; IF&nbsp;7.6, Q1 &middot; 2026 &middot; <a href="https://doi.org/10.1016/j.iot.2026.101895" target="_blank" rel="noopener" class="doi">DOI ↗</a></p>
+    <p>Long-term <strong>IoT</strong> load forecasting with adaptive attention and temporal projection encoding for non-stationary streams. Trained and benchmarked on a dedicated GPU server.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/tsformer_icufn_2025.pdf" target="_blank" rel="noopener" aria-label="Open TSFormer architecture in new tab"><img src="/assets/papers/tsformer_icufn_2025.png" alt="TSFormer architecture" loading="lazy" /></a>
+    <h3>TSFormer</h3>
+    <p class="venue">ICUFN 2025 &middot; Lisbon &middot; <a href="https://ieeexplore.ieee.org/document/11170021" target="_blank" rel="noopener" class="doi">IEEE Xplore ↗</a></p>
+    <p>Multi-horizon temporal-aware transformer with learnable positional encodings, for non-stationary energy demand on <strong>IoT</strong> grids.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/multillm_vtc_2026.pdf" target="_blank" rel="noopener" aria-label="Open Graph-constrained multi-LLM ensembles in new tab"><img src="/assets/papers/multillm_vtc_2026.png" alt="Graph-constrained multi-LLM ensembles" loading="lazy" /></a>
+    <h3>Graph-constrained multi-LLM ensembles</h3>
+    <p class="venue">IEEE VTC2026-Spring &middot; Nice</p>
+    <p>Ensemble of multiple LLMs (and <strong>sLM</strong> variants) over temporal <strong>IoT</strong> sensor networks, grounded in a structural causal model.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/spec2llama_eswa_2026.pdf" target="_blank" rel="noopener" aria-label="Open Spec2Llama architecture in new tab"><img src="/assets/papers/spec2llama_eswa_2026.png" alt="Spec2Llama architecture" loading="lazy" /></a>
+    <h3>Spec2Llama</h3>
+    <p class="venue">Expert Systems with Applications &middot; IF&nbsp;7.5, Q1 &middot; 2026 &middot; <a href="https://doi.org/10.1016/j.eswa.2026.131986" target="_blank" rel="noopener" class="doi">DOI ↗</a></p>
+    <p>Spectral-aware forecasting that prompts a frozen Llama (used here as a backbone for <strong>sLM</strong>-scale variants) with frequency-domain tokens, generalising across heterogeneous time-series tasks including <strong>IoT</strong> streams.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/spec2llm_icce_2026.pdf" target="_blank" rel="noopener" aria-label="Open Spec2LLM architecture in new tab"><img src="/assets/papers/spec2llm_icce_2026.png" alt="Spec2LLM architecture" loading="lazy" /></a>
+    <h3>Spec2LLM</h3>
+    <p class="venue">IEEE ICCE 2026 &middot; Dubai &middot; <a href="https://ieeexplore.ieee.org/document/11449688" target="_blank" rel="noopener" class="doi">IEEE Xplore ↗</a></p>
+    <p>Spectral-to-language reprogramming for power-transformer temperature forecasting on <strong>IoT-instrumented</strong> grid equipment, with a small-language-model (<strong>sLM</strong>) deployment target.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/llm4imp_icc_2026.pdf" target="_blank" rel="noopener" aria-label="Open LLM4Imp architecture in new tab"><img src="/assets/papers/llm4imp_icc_2026.png" alt="LLM4Imp architecture" loading="lazy" /></a>
+    <h3>LLM4Imp</h3>
+    <p class="venue">IEEE ICC 2026 &middot; Glasgow</p>
+    <p>Frozen LLMs (and lighter <strong>sLM</strong> backbones) guided by spectral prompts for time-series imputation on <strong>IoT</strong> data under heavy missing-data regimes.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/cnnbilstm_vtc_2024.pdf" target="_blank" rel="noopener" aria-label="Open CNN-BiLSTM hybrid in new tab"><img src="/assets/papers/cnnbilstm_vtc_2024.png" alt="CNN-BiLSTM hybrid" loading="lazy" /></a>
+    <h3>Hybrid Attention CNN-BiLSTM <span class="award-pill">★ VTS 2024 Award</span></h3>
+    <p class="venue">IEEE VTC2024-Fall &middot; Washington D.C. &middot; <a href="https://ieeexplore.ieee.org/document/10757868" target="_blank" rel="noopener" class="doi">IEEE Xplore ↗</a></p>
+    <p>Hybrid attention-based CNN-BiLSTM with data augmentation for short-term <strong>IoT</strong> load forecasting on dedicated GPU infrastructure. Awarded the IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award.</p>
+  </article>
+
+</div>
+<h2>Two-year DC2 plan (April 2027 &ndash; March 2029)</h2>
+<ul>
+<li><p><b>Year 1.</b> Pillar 1 &#8201;&mdash;&#8201; formal coupling bounds; validation on IEEE 14<i>30</i>57/118; submission to IEEE Trans. Smart Grid; conference paper at IEEE ICC or GLOBECOM.
+</p>
+</li>
+<li><p><b>Year 2.</b> Pillars 2 and 3 &#8201;&mdash;&#8201; multi-impairment extension on PEGASE 2,869-bus; SLM-based SCADA on real PMU data; submissions to <i>Applied Energy</i> and IEEE Trans. Power Systems; dissertation finalisation.
+</p>
+</li>
+</ul>
+<h2>Impact and outlook</h2>
+<p>The doctoral work bridges three traditionally separate communities &#8201;&mdash;&#8201; power-system control theory, deep learning, and grid cybersecurity &#8201;&mdash;&#8201; and is intended to seed a <b>Japan / Côte d'Ivoire research bridge</b> on smart-grid resilience for emerging-economy grids.
+</p>
+<p>For the full publication record, see <a href="publications.html" target="_blank" rel="noopener">publications</a>.
+</p>
+</main>
+<footer id="site-footer">
+  <span>Updated <span class="build-date">2026-05</span></span>
+  <span class="footer-sep">·</span>
+  <span><a href="https://github.com/mesabo/profile">source</a></span>
+  <span class="footer-sep">·</span>
+  <span>built with <a href="http://jemdoc.jaboc.net/">jemdoc</a></span>
+</footer>
+</body>
+</html>
