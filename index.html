@@ -59,6 +59,17 @@
       var href = (current.getAttribute('href') || '').replace('.html', '').replace(/[^a-z0-9]/gi, '');
       if (href) document.body.classList.add('page-' + href);
     }
+    // mark language-section menu items so we can grayscale non-current flags
+    var inLang = false;
+    var nodes = document.querySelectorAll('#layout-menu-inner > div');
+    var langLabels = ['language', 'langue', '言語'];
+    nodes.forEach(function (el) {
+      if (el.classList.contains('menu-category')) {
+        inLang = langLabels.indexOf(el.textContent.trim().toLowerCase()) !== -1;
+      } else if (inLang && el.classList.contains('menu-item')) {
+        el.classList.add('menu-item-lang');
+      }
+    });
   })();
 </script>
 <div id="layout-menu">
@@ -166,19 +177,19 @@
 </ul>
 <h2>Where to go next</h2>
 <ul>
-<li><p><a href="publications.html" target="_blank" rel="noopener">Publications</a> &#8201;&mdash;&#8201; 2 Q1 journals + 8 IEEE flagship conferences
+<li><p><a href="publications.html">Publications</a> &#8201;&mdash;&#8201; 2 Q1 journals + 8 IEEE flagship conferences
 </p>
 </li>
-<li><p><a href="research.html" target="_blank" rel="noopener">Research</a> &#8201;&mdash;&#8201; current PhD project + spectral-reprogramming track
+<li><p><a href="research.html">Research</a> &#8201;&mdash;&#8201; current PhD project + spectral-reprogramming track
 </p>
 </li>
-<li><p><a href="experiences.html" target="_blank" rel="noopener">Experiences</a> &#8201;&mdash;&#8201; career + downloadable CVs (AI <i> SE, EN </i> JP)
+<li><p><a href="experiences.html">Experiences</a> &#8201;&mdash;&#8201; career + downloadable CVs (AI <i> SE, EN </i> JP)
 </p>
 </li>
-<li><p><a href="awards.html" target="_blank" rel="noopener">Awards</a> &#8201;&mdash;&#8201; VTS 2024 Student Paper Award and service appointments
+<li><p><a href="awards.html">Awards</a> &#8201;&mdash;&#8201; VTS 2024 Student Paper Award and service appointments
 </p>
 </li>
-<li><p><a href="other.html" target="_blank" rel="noopener">Other</a> &#8201;&mdash;&#8201; open-source projects, mentorship, travels and photos
+<li><p><a href="other.html">Other</a> &#8201;&mdash;&#8201; open-source projects, mentorship, travels and photos
 </p>
 </li>
 </ul>

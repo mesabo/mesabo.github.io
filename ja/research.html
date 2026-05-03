@@ -59,6 +59,17 @@
       var href = (current.getAttribute('href') || '').replace('.html', '').replace(/[^a-z0-9]/gi, '');
       if (href) document.body.classList.add('page-' + href);
     }
+    // mark language-section menu items so we can grayscale non-current flags
+    var inLang = false;
+    var nodes = document.querySelectorAll('#layout-menu-inner > div');
+    var langLabels = ['language', 'langue', '言語'];
+    nodes.forEach(function (el) {
+      if (el.classList.contains('menu-category')) {
+        inLang = langLabels.indexOf(el.textContent.trim().toLowerCase()) !== -1;
+      } else if (inLang && el.classList.contains('menu-item')) {
+        el.classList.add('menu-item-lang');
+      }
+    });
   })();
 </script>
 <div id="layout-menu">
@@ -245,7 +256,7 @@
 <h2>影響と展望</h2>
 <p>博士研究は、伝統的に分かれていた三領域（電力系統制御理論、深層学習、電力系統サイバーセキュリティ）を結ぶことを目指し、新興経済圏のスマートグリッド耐障害性に関する<b>日本／コートジボワール 研究架橋</b>の種をまくことを意図しています。
 </p>
-<p>論文一覧は<a href="publications.html" target="_blank" rel="noopener">出版物</a>を参照してください。
+<p>論文一覧は<a href="publications.html">出版物</a>を参照してください。
 </p>
 <footer id="site-footer">
   <span>Updated <span class="build-date">2026-05</span></span>

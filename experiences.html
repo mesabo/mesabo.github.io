@@ -59,6 +59,17 @@
       var href = (current.getAttribute('href') || '').replace('.html', '').replace(/[^a-z0-9]/gi, '');
       if (href) document.body.classList.add('page-' + href);
     }
+    // mark language-section menu items so we can grayscale non-current flags
+    var inLang = false;
+    var nodes = document.querySelectorAll('#layout-menu-inner > div');
+    var langLabels = ['language', 'langue', '言語'];
+    nodes.forEach(function (el) {
+      if (el.classList.contains('menu-category')) {
+        inLang = langLabels.indexOf(el.textContent.trim().toLowerCase()) !== -1;
+      } else if (inLang && el.classList.contains('menu-item')) {
+        el.classList.add('menu-item-lang');
+      }
+    });
   })();
 </script>
 <div id="layout-menu">
@@ -142,15 +153,15 @@
 </p>
 </li>
 </ul>
-<h3>Internship &#8201;&mdash;&#8201; <b><a href="https://www.jica.go.jp/english/index.html" target="_blank" rel="noopener">JICA (Japan International Cooperation Agency)</a></b></h3>
+<h3>Internship &#8201;&mdash;&#8201; <b><a href="https://www.jica.go.jp/english/index.html">JICA (Japan International Cooperation Agency)</a></b></h3>
 <p><i>July 2024, Tokyo &#8201;&mdash;&#8201; 1 month</i>
 </p>
 <p>Hands-on introduction to <b>Generative AI applied to real-world business problems</b>: discovery, prototyping, and demonstrating LLM-powered solutions for the consulting practice. First substantial exposure to building production GenAI systems for industry clients.
 </p>
-<h3>TICAD9 booth &#8201;&mdash;&#8201; <b><a href="https://www.jica.go.jp/english/index.html" target="_blank" rel="noopener">JICA</a></b> representative</h3>
+<h3>TICAD9 booth &#8201;&mdash;&#8201; <b><a href="https://www.jica.go.jp/english/index.html">JICA</a></b> representative</h3>
 <p><i>August 2025, Yokohama</i>
 </p>
-<p>Returned to support JICA at the <b>9th Tokyo International Conference on African Development (<a href="https://www.jica.go.jp/english/our_work/types_of_assistance/ticad/index.html" target="_blank" rel="noopener">TICAD9</a>)</b>. Staffed the JICA booth and demonstrated applied ML and GenAI prototypes for African energy and infrastructure use cases to a high-traffic, international audience including African delegations.
+<p>Returned to support JICA at the <b>9th Tokyo International Conference on African Development (<a href="https://www.jica.go.jp/english/our_work/types_of_assistance/ticad/index.html">TICAD9</a>)</b>. Staffed the JICA booth and demonstrated applied ML and GenAI prototypes for African energy and infrastructure use cases to a high-traffic, international audience including African delegations.
 </p>
 <h2>AI / backend engineering &#8201;&mdash;&#8201; ongoing</h2>
 <ul>

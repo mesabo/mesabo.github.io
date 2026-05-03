@@ -59,6 +59,17 @@
       var href = (current.getAttribute('href') || '').replace('.html', '').replace(/[^a-z0-9]/gi, '');
       if (href) document.body.classList.add('page-' + href);
     }
+    // mark language-section menu items so we can grayscale non-current flags
+    var inLang = false;
+    var nodes = document.querySelectorAll('#layout-menu-inner > div');
+    var langLabels = ['language', 'langue', '言語'];
+    nodes.forEach(function (el) {
+      if (el.classList.contains('menu-category')) {
+        inLang = langLabels.indexOf(el.textContent.trim().toLowerCase()) !== -1;
+      } else if (inLang && el.classList.contains('menu-item')) {
+        el.classList.add('menu-item-lang');
+      }
+    });
   })();
 </script>
 <div id="layout-menu">
@@ -133,7 +144,7 @@
 <li><p><b>Volunteer lecturer</b> &#8201;&mdash;&#8201; invited talks at 2 Japanese high schools on AI and smart energy systems (200+ students reached).
 </p>
 </li>
-<li><p><b>TICAD9 exhibition</b> &#8201;&mdash;&#8201; represented <a href="https://www.jica.go.jp/english/index.html" target="_blank" rel="noopener">JICA (Japan International Cooperation Agency)</a> at the booth of the 9th Tokyo International Conference on African Development; demonstrated Generative AI prototypes for African energy and infrastructure use cases.
+<li><p><b>TICAD9 exhibition</b> &#8201;&mdash;&#8201; represented <a href="https://www.jica.go.jp/english/index.html">JICA (Japan International Cooperation Agency)</a> at the booth of the 9th Tokyo International Conference on African Development; demonstrated Generative AI prototypes for African energy and infrastructure use cases.
 </p>
 </li>
 <li><p><b>Japan / Côte d'Ivoire research bridge</b> &#8201;&mdash;&#8201; long-term plan to seed smart-grid resilience capacity in West Africa.

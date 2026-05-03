@@ -59,6 +59,17 @@
       var href = (current.getAttribute('href') || '').replace('.html', '').replace(/[^a-z0-9]/gi, '');
       if (href) document.body.classList.add('page-' + href);
     }
+    // mark language-section menu items so we can grayscale non-current flags
+    var inLang = false;
+    var nodes = document.querySelectorAll('#layout-menu-inner > div');
+    var langLabels = ['language', 'langue', '言語'];
+    nodes.forEach(function (el) {
+      if (el.classList.contains('menu-category')) {
+        inLang = langLabels.indexOf(el.textContent.trim().toLowerCase()) !== -1;
+      } else if (inLang && el.classList.contains('menu-item')) {
+        el.classList.add('menu-item-lang');
+      }
+    });
   })();
 </script>
 <div id="layout-menu">
@@ -151,7 +162,7 @@ IEEE Global Communications Conference (GLOBECOM 2025), pp. 1706-1711, 2025. (ora
 </ol>
 <h2>Distinctions</h2>
 <ul>
-<li><p><b>IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award and Encouragement Award</b> &#8201;&mdash;&#8201; VTC2024-Fall, Washington D.C., octobre 2024. Récompense pour des travaux étudiants exceptionnels en apprentissage machine appliqué à l'IoT et aux systèmes énergétiques. Voir la <a href="awards.html" target="_blank" rel="noopener">page Distinctions</a> pour le certificat.
+<li><p><b>IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award and Encouragement Award</b> &#8201;&mdash;&#8201; VTC2024-Fall, Washington D.C., octobre 2024. Récompense pour des travaux étudiants exceptionnels en apprentissage machine appliqué à l'IoT et aux systèmes énergétiques. Voir la <a href="awards.html">page Distinctions</a> pour le certificat.
 </p>
 </li>
 </ul>

@@ -59,6 +59,17 @@
       var href = (current.getAttribute('href') || '').replace('.html', '').replace(/[^a-z0-9]/gi, '');
       if (href) document.body.classList.add('page-' + href);
     }
+    // mark language-section menu items so we can grayscale non-current flags
+    var inLang = false;
+    var nodes = document.querySelectorAll('#layout-menu-inner > div');
+    var langLabels = ['language', 'langue', '言語'];
+    nodes.forEach(function (el) {
+      if (el.classList.contains('menu-category')) {
+        inLang = langLabels.indexOf(el.textContent.trim().toLowerCase()) !== -1;
+      } else if (inLang && el.classList.contains('menu-item')) {
+        el.classList.add('menu-item-lang');
+      }
+    });
   })();
 </script>
 <div id="layout-menu">
@@ -166,19 +177,19 @@
 </ul>
 <h2>Pour aller plus loin</h2>
 <ul>
-<li><p><a href="publications.html" target="_blank" rel="noopener">Publications</a> &#8201;&mdash;&#8201; 2 revues Q1 + 8 conférences IEEE phares
+<li><p><a href="publications.html">Publications</a> &#8201;&mdash;&#8201; 2 revues Q1 + 8 conférences IEEE phares
 </p>
 </li>
-<li><p><a href="research.html" target="_blank" rel="noopener">Recherche</a> &#8201;&mdash;&#8201; projet doctoral en cours + axe de reprogrammation spectrale
+<li><p><a href="research.html">Recherche</a> &#8201;&mdash;&#8201; projet doctoral en cours + axe de reprogrammation spectrale
 </p>
 </li>
-<li><p><a href="experiences.html" target="_blank" rel="noopener">Expériences</a> &#8201;&mdash;&#8201; parcours + CV téléchargeables (IA <i> SE, EN </i> JP)
+<li><p><a href="experiences.html">Expériences</a> &#8201;&mdash;&#8201; parcours + CV téléchargeables (IA <i> SE, EN </i> JP)
 </p>
 </li>
-<li><p><a href="awards.html" target="_blank" rel="noopener">Distinctions</a> &#8201;&mdash;&#8201; VTS 2024 Student Paper Award et nominations
+<li><p><a href="awards.html">Distinctions</a> &#8201;&mdash;&#8201; VTS 2024 Student Paper Award et nominations
 </p>
 </li>
-<li><p><a href="other.html" target="_blank" rel="noopener">Autres</a> &#8201;&mdash;&#8201; projets open-source, mentorat, voyages et photos
+<li><p><a href="other.html">Autres</a> &#8201;&mdash;&#8201; projets open-source, mentorat, voyages et photos
 </p>
 </li>
 </ul>

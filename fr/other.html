@@ -59,6 +59,17 @@
       var href = (current.getAttribute('href') || '').replace('.html', '').replace(/[^a-z0-9]/gi, '');
       if (href) document.body.classList.add('page-' + href);
     }
+    // mark language-section menu items so we can grayscale non-current flags
+    var inLang = false;
+    var nodes = document.querySelectorAll('#layout-menu-inner > div');
+    var langLabels = ['language', 'langue', '言語'];
+    nodes.forEach(function (el) {
+      if (el.classList.contains('menu-category')) {
+        inLang = langLabels.indexOf(el.textContent.trim().toLowerCase()) !== -1;
+      } else if (inLang && el.classList.contains('menu-item')) {
+        el.classList.add('menu-item-lang');
+      }
+    });
   })();
 </script>
 <div id="layout-menu">
@@ -133,7 +144,7 @@
 <li><p><b>Conférencier bénévole</b> &#8201;&mdash;&#8201; interventions dans 2 lycées japonais sur l'IA et les systèmes énergétiques intelligents (200+ étudiants touchés).
 </p>
 </li>
-<li><p><b>Stand TICAD9</b> &#8201;&mdash;&#8201; représentation de <a href="https://www.jica.go.jp/french/index.html" target="_blank" rel="noopener">JICA (Agence japonaise de coopération internationale)</a> au stand de la 9e Conférence internationale de Tokyo sur le développement de l'Afrique; démonstrations de prototypes d'IA générative pour énergies et infrastructures africaines.
+<li><p><b>Stand TICAD9</b> &#8201;&mdash;&#8201; représentation de <a href="https://www.jica.go.jp/french/index.html">JICA (Agence japonaise de coopération internationale)</a> au stand de la 9e Conférence internationale de Tokyo sur le développement de l'Afrique; démonstrations de prototypes d'IA générative pour énergies et infrastructures africaines.
 </p>
 </li>
 <li><p><b>Pont de recherche Japon / Côte d'Ivoire</b> &#8201;&mdash;&#8201; plan à long terme pour amorcer des capacités de résilience smart-grid en Afrique de l'Ouest.

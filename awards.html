@@ -59,6 +59,17 @@
       var href = (current.getAttribute('href') || '').replace('.html', '').replace(/[^a-z0-9]/gi, '');
       if (href) document.body.classList.add('page-' + href);
     }
+    // mark language-section menu items so we can grayscale non-current flags
+    var inLang = false;
+    var nodes = document.querySelectorAll('#layout-menu-inner > div');
+    var langLabels = ['language', 'langue', '言語'];
+    nodes.forEach(function (el) {
+      if (el.classList.contains('menu-category')) {
+        inLang = langLabels.indexOf(el.textContent.trim().toLowerCase()) !== -1;
+      } else if (inLang && el.classList.contains('menu-item')) {
+        el.classList.add('menu-item-lang');
+      }
+    });
   })();
 </script>
 <div id="layout-menu">
@@ -97,7 +108,7 @@
   <article class="paper-card">
     <a class="paper-fig" href="/assets/awards/jica_development_studies_program_2025.pdf" target="_blank" rel="noopener" aria-label="Open JICA Development Studies Program 2025 certificate"><img src="/assets/awards/jica_development_studies_program_2025.png" alt="JICA Development Studies Program 2025 certificate" loading="lazy" /></a>
     <h3>JICA Development Studies Program (JICA専用講座) <span class="award-pill">2025</span></h3>
-    <p class="venue"><a href="https://www.jica.go.jp/english/index.html" target="_blank" rel="noopener">Japan International Cooperation Agency (JICA)</a> &middot; 2025</p>
+    <p class="venue"><a href="https://www.jica.go.jp/english/index.html">Japan International Cooperation Agency (JICA)</a> &middot; 2025</p>
     <p>Completion of the JICA-dedicated graduate course on international development, with a focus on technology transfer and sustainable infrastructure for emerging economies.</p>
   </article>
 

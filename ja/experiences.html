@@ -59,6 +59,17 @@
       var href = (current.getAttribute('href') || '').replace('.html', '').replace(/[^a-z0-9]/gi, '');
       if (href) document.body.classList.add('page-' + href);
     }
+    // mark language-section menu items so we can grayscale non-current flags
+    var inLang = false;
+    var nodes = document.querySelectorAll('#layout-menu-inner > div');
+    var langLabels = ['language', 'langue', '言語'];
+    nodes.forEach(function (el) {
+      if (el.classList.contains('menu-category')) {
+        inLang = langLabels.indexOf(el.textContent.trim().toLowerCase()) !== -1;
+      } else if (inLang && el.classList.contains('menu-item')) {
+        el.classList.add('menu-item-lang');
+      }
+    });
   })();
 </script>
 <div id="layout-menu">
@@ -142,12 +153,12 @@
 </p>
 </li>
 </ul>
-<h3>インターンシップ &#8201;&mdash;&#8201; <b><a href="https://www.jica.go.jp/index.html" target="_blank" rel="noopener">JICA（独立行政法人国際協力機構）</a></b></h3>
+<h3>インターンシップ &#8201;&mdash;&#8201; <b><a href="https://www.jica.go.jp/index.html">JICA（独立行政法人国際協力機構）</a></b></h3>
 <p><i>2024 年 7 月, 東京 &#8201;&mdash;&#8201; 1 ヶ月</i>
 </p>
 <p><b>実務向け生成 AI</b> に関する実践的入門: 発見、プロトタイピング、コンサルティング業務向け LLM 活用ソリューションの実演。産業クライアント向けの本番 GenAI システム構築への初の本格的な経験。
 </p>
-<h3>TICAD9 ブース &#8201;&mdash;&#8201; <b><a href="https://www.jica.go.jp/index.html" target="_blank" rel="noopener">JICA</a></b> 代表</h3>
+<h3>TICAD9 ブース &#8201;&mdash;&#8201; <b><a href="https://www.jica.go.jp/index.html">JICA</a></b> 代表</h3>
 <p><i>2025 年 8 月, 横浜</i>
 </p>
 <p>*第 9 回アフリカ開発会議（[https:<i></i>www.jica.go.jp/index.html
