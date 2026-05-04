@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Franck Junior Aboya MESSOU — PhD researcher at Hosei University YuLab, working on AI/LLM methods for smart-grid stability and IoT systems. Also full-stack and AI/backend engineer." />
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+<link rel="alternate icon" type="image/png" href="/assets/photo.png" />
+<link rel="apple-touch-icon" href="/assets/photo.png" />
+<meta property="og:type" content="profile" />
+<meta property="og:site_name" content="Franck Junior Aboya MESSOU" />
+<meta property="og:title" content="Franck Junior Aboya MESSOU — PhD researcher (Hosei YuLab) · AI / Backend / Full-stack engineer" />
+<meta property="og:description" content="AI / sLM / LLM methods for smart-grid stability and IoT systems. 2 Q1 journal papers, 5 IEEE flagship first-author papers, IEEE VTS 2024 Student Paper Award." />
+<meta property="og:url" content="https://mesabo.github.io/" />
+<meta property="og:image" content="https://mesabo.github.io/assets/photo.png" />
+<meta property="og:image:alt" content="Franck Junior Aboya MESSOU" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Franck Junior Aboya MESSOU — PhD researcher · Engineer" />
+<meta name="twitter:description" content="AI / sLM / LLM for smart-grid stability and IoT systems. Hosei University YuLab." />
+<meta name="twitter:image" content="https://mesabo.github.io/assets/photo.png" />
+<script>
+  // set theme before paint to avoid flash
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="/mysite.css" type="text/css" />
+<title>Skills · Franck Junior Aboya MESSOU</title>
+</head>
+<body>
+<button id="theme-toggle" type="button" aria-label="Toggle light / dark theme" title="Toggle light / dark">
+  <span class="theme-icon-light">☀</span>
+  <span class="theme-icon-dark">☾</span>
+</button>
+<script>
+  (function () {
+    var btn = document.getElementById('theme-toggle');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        var cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        var next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    }
+    // tag <body> with the current page slug (drives the top accent band)
+    var current = document.querySelector('.menu-item a.current');
+    if (current) {
+      var href = (current.getAttribute('href') || '').replace('.html', '').replace(/[^a-z0-9]/gi, '');
+      if (href) document.body.classList.add('page-' + href);
+    }
+    // mark language-section menu items so we can grayscale non-current flags
+    var inLang = false;
+    var nodes = document.querySelectorAll('#layout-menu-inner > div');
+    var langLabels = ['language', 'langue', '言語'];
+    nodes.forEach(function (el) {
+      if (el.classList.contains('menu-category')) {
+        inLang = langLabels.indexOf(el.textContent.trim().toLowerCase()) !== -1;
+      } else if (inLang && el.classList.contains('menu-item')) {
+        el.classList.add('menu-item-lang');
+      }
+    });
+  })();
+</script>
+<div id="layout-menu">
+<div id="layout-menu-inner">
+<div class="menu-category">profile</div>
+<div class="menu-item"><a href="index.html">About&nbsp;me</a></div>
+<div class="menu-item"><a href="publications.html">Publications</a></div>
+<div class="menu-item"><a href="research.html">Research</a></div>
+<div class="menu-item"><a href="experiences.html">Experiences</a></div>
+<div class="menu-item"><a href="skills.html" class="current">Skills</a></div>
+<div class="menu-item"><a href="awards.html">Awards</a></div>
+<div class="menu-item"><a href="other.html">Other</a></div>
+<div class="menu-category">contact</div>
+<div class="menu-item"><a href="https://github.com/mesabo" target="_blank" rel="noopener">GitHub</a></div>
+<div class="menu-item"><a href="https://www.linkedin.com/in/mesabo/" target="_blank" rel="noopener">LinkedIn</a></div>
+<div class="menu-item"><a href="https://scholar.google.com/citations?user=tHBBTIEAAAAJ" target="_blank" rel="noopener">Google&nbsp;Scholar</a></div>
+<div class="menu-item"><a href="mailto:mesabo18@gmail.com" target="_blank" rel="noopener">mesabo18@gmail.com</a></div>
+<div class="menu-category">language</div>
+<div class="menu-item"><a href="index.html">🇬🇧&nbsp;English</a></div>
+<div class="menu-item"><a href="fr/index.html">🇫🇷&nbsp;Français</a></div>
+<div class="menu-item"><a href="ja/index.html">🇯🇵&nbsp;日本語</a></div>
+</div>
+</div>
+<main id="layout-content">
+<div id="toptitle" class="hide-on-index">
+<h1>Skills</h1>
+</div>
+<p>A scannable view of the languages, tools, and methods I work with day to day.
+</p>
+<h2>Programming languages</h2>
+<h4 class="skills-tier">Daily / strong</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/python.svg" alt="" /> Python</span>
+  <span><img src="/assets/icons/java.svg" alt="" /> Java</span>
+  <span><img src="/assets/icons/dart.svg" alt="" /> Dart</span>
+  <span><img src="/assets/icons/postgresql.svg" alt="" /> SQL</span>
+  <span><img src="/assets/icons/gnubash.svg" alt="" /> Bash</span>
+</div>
+
+<h4 class="skills-tier">Working / regular</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/cplusplus.svg" alt="" /> C / C++ <small>(GPU / CUDA glue)</small></span>
+  <span><img src="/assets/icons/javascript.svg" alt="" /> JavaScript</span>
+</div>
+
+<h4 class="skills-tier">Reading / occasional</h4>
+<div class="skills-chips skills-chips-soft">
+  <span><img src="/assets/icons/go.svg" alt="" /> Go</span>
+  <span><img src="/assets/icons/swift.svg" alt="" /> Swift</span>
+  <span><img src="/assets/icons/kotlin.svg" alt="" /> Kotlin</span>
+  <span><img src="/assets/icons/typescript.svg" alt="" /> TypeScript</span>
+</div>
+<h2>AI / ML stack</h2>
+<h4 class="skills-tier">Frameworks</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/pytorch.svg" alt="" /> PyTorch</span>
+  <span><img src="/assets/icons/huggingface.svg" alt="" /> Hugging Face Transformers</span>
+  <span>vLLM</span>
+  <span><img src="/assets/icons/scikitlearn.svg" alt="" /> scikit-learn</span>
+  <span><img src="/assets/icons/pandas.svg" alt="" /> pandas</span>
+  <span><img src="/assets/icons/numpy.svg" alt="" /> NumPy</span>
+</div>
+
+<h4 class="skills-tier">LLMs &amp; APIs</h4>
+<div class="skills-chips">
+  <span>OpenAI</span>
+  <span><img src="/assets/icons/anthropic.svg" alt="" /> Anthropic</span>
+  <span>Llama</span>
+  <span>Qwen</span>
+  <span>Phi</span>
+</div>
+
+<h4 class="skills-tier">Topics</h4>
+<div class="skills-chips skills-chips-soft">
+  <span>Time-series forecasting</span>
+  <span>Spectral reprogramming</span>
+  <span>Graph neural networks</span>
+  <span>Federated learning (FL)</span>
+  <span>Prompt engineering</span>
+  <span>Adversarial / hallucination testing</span>
+</div>
+<h2>Backend &amp;amp; APIs</h2>
+<div class="skills-chips">
+  <span><img src="/assets/icons/flask.svg" alt="" /> Flask</span>
+  <span><img src="/assets/icons/fastapi.svg" alt="" /> FastAPI</span>
+  <span><img src="/assets/icons/nodedotjs.svg" alt="" /> Node.js</span>
+  <span><img src="/assets/icons/express.svg" alt="" /> Express</span>
+  <span><img src="/assets/icons/graphql.svg" alt="" /> GraphQL</span>
+  <span>REST</span>
+  <span><img src="/assets/icons/jsonwebtokens.svg" alt="" /> JWT / OAuth</span>
+</div>
+<h2>Databases</h2>
+<div class="skills-chips">
+  <span><img src="/assets/icons/mongodb.svg" alt="" /> MongoDB</span>
+  <span><img src="/assets/icons/postgresql.svg" alt="" /> PostgreSQL</span>
+  <span><img src="/assets/icons/mysql.svg" alt="" /> MySQL</span>
+  <span><img src="/assets/icons/sqlite.svg" alt="" /> SQLite</span>
+</div>
+<p class="skills-note">Schema design, indexing, query optimisation. Data engineering on PMU and IoT sensor streams.</p>
+<h2>Frontend &amp;amp; mobile</h2>
+<div class="skills-chips">
+  <span><img src="/assets/icons/flutter.svg" alt="" /> Flutter / Dart</span>
+  <span><img src="/assets/icons/react.svg" alt="" /> React <small>(Hooks, Router, Vite)</small></span>
+  <span><img src="/assets/icons/html5.svg" alt="" /> HTML5</span>
+  <span><img src="/assets/icons/css3.svg" alt="" /> CSS3</span>
+</div>
+<p class="skills-note">Mobile apps shipped: <em>crudium</em>&nbsp;⭐, <em>chronohouse</em>, <em>progistack_mobile</em>, <em>flutter_graphql_io</em>.</p>
+<h2>DevOps · Cloud · Infrastructure</h2>
+<h4 class="skills-tier">Containers &amp; CI</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/docker.svg" alt="" /> Docker</span>
+  <span><img src="/assets/icons/docker.svg" alt="" /> docker-compose</span>
+  <span><img src="/assets/icons/githubactions.svg" alt="" /> GitHub Actions</span>
+  <span><img src="/assets/icons/make.svg" alt="" /> Make</span>
+</div>
+
+<h4 class="skills-tier">Cloud — Google Cloud Platform</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/googlecloud.svg" alt="" /> Compute Engine</span>
+  <span><img src="/assets/icons/googlecloud.svg" alt="" /> Cloud Storage</span>
+  <span><img src="/assets/icons/googlecloud.svg" alt="" /> Cloud Run</span>
+  <span><img src="/assets/icons/googlecloud.svg" alt="" /> IAM</span>
+</div>
+
+<h4 class="skills-tier">Servers &amp; GPU</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/linux.svg" alt="" /> Linux server admin</span>
+  <span><img src="/assets/icons/nvidia.svg" alt="" /> Multi-GPU bring-up</span>
+  <span><img src="/assets/icons/nvidia.svg" alt="" /> CUDA toolchain</span>
+  <span><img src="/assets/icons/nvidia.svg" alt="" /> NVIDIA drivers</span>
+  <span>Distributed training (DDP)</span>
+  <span>Inference serving</span>
+</div>
+<h2>Spoken languages</h2>
+<div class="skills-chips skills-chips-langs">
+  <span>🇫🇷 French <small>native</small></span>
+  <span>🇬🇧 English <small>fluent</small></span>
+  <span>🇯🇵 Japanese <small>daily conversational, ongoing study — JLPT N4</small></span>
+</div>
+<h2>Methods · ways of working</h2>
+<ul>
+<li><p><b>Solo work</b> &#8201;&mdash;&#8201; end-to-end ownership: research code, infrastructure, writing, deploy.
+</p>
+</li>
+<li><p><b>Team work</b> &#8201;&mdash;&#8201; international collaborations (research papers), JICA scholar, YuLab seminars.
+</p>
+</li>
+<li><p><b>Mentorship</b> &#8201;&mdash;&#8201; TA &amp;amp; RA at Hosei IIST; ESATIC mentor (15+ undergraduates); volunteer lecturer at 2 Japanese high schools.
+</p>
+</li>
+<li><p><b>Cross-cultural</b> &#8201;&mdash;&#8201; comfortable across Japan, the Gulf, and West Africa, in French <i> English </i> Japanese.
+</p>
+</li>
+<li><p><b>Writing under deadline pressure</b> &#8201;&mdash;&#8201; 11 of 12 first-author submissions accepted across journals and conferences.
+</p>
+</li>
+<li><p><b>Reproducible research</b> &#8201;&mdash;&#8201; version control, evaluation harnesses, ablations, multi-seed validation.
+</p>
+</li>
+</ul>
+<p class="skills-cta">
+  Looking for collaboration?
+  <a href="mailto:mesabo18@gmail.com">mesabo18@gmail.com</a>
+  &middot;
+  <a href="https://www.linkedin.com/in/mesabo/" target="_blank" rel="noopener">LinkedIn</a>
+</p>
+<footer id="site-footer">
+  <span>Updated <span class="build-date">2026-05</span></span>
+  <span class="footer-sep">·</span>
+  <span><a href="https://github.com/mesabo/profile">source</a></span>
+  <span class="footer-sep">·</span>
+  <span>built with <a href="http://jemdoc.jaboc.net/">jemdoc</a></span>
+</footer>
+</main>
+</body>
+</html>
