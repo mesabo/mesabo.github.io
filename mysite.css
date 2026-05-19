@@ -855,6 +855,10 @@ details.more.facet-fullstack > summary { color: var(--accent-3-strong); }
 details.more.facet-research[open]      { border-left-color: var(--accent); }
 details.more.facet-engineer[open]      { border-left-color: var(--accent-2); }
 details.more.facet-fullstack[open]     { border-left-color: var(--accent-3); }
+
+/* GitHub contribution heatmap */
+a.gh-activity-link { display: block; margin: 0.6rem 0 0.2rem; }
+img.gh-activity { width: 100%; height: auto; display: block; }
 details.more > summary::-webkit-details-marker,
 details.more > summary::marker { display: none; }
 details.more > summary::before {
