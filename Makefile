@@ -5,6 +5,14 @@
 #   make clean     # remove build/
 #   make deploy    # push build/ to mesabo/mesabo.github.io (force, main branch)
 
+# Portable in-place sed (BSD/macOS needs '' after -i; GNU/Linux does not)
+UNAME := $(shell uname)
+ifeq ($(UNAME),Darwin)
+SED_I := sed -i ''
+else
+SED_I := sed -i
+endif
+
 JEMDOC := python3 tools/jemdoc
 CONF   := mysite.conf
 PAGES  := index publications research experiences skills awards other
@@ -51,24 +59,24 @@ $(BUILD)/404.html: 404.jemdoc $(CONF)
 inject-date:
 	@d=$$(date -u +"%Y-%m"); \
 	v=$$(date -u +"%Y%m%d%H%M"); \
-	find $(BUILD) -name '*.html' -exec sed -i '' "s/__BUILD_DATE__/$$d/g" {} \; ; \
-	find $(BUILD) -name '*.html' -exec sed -i '' "s|/mysite.css\"|/mysite.css?v=$$v\"|g" {} \; ; \
-	find $(BUILD) -name '*.html' -exec sed -i '' "s|/assets/photo.png\"|/assets/photo.png?v=$$v\"|g" {} \; ; \
+	find $(BUILD) -name '*.html' -exec $(SED_I) "s/__BUILD_DATE__/$$d/g" {} \; ; \
+	find $(BUILD) -name '*.html' -exec $(SED_I) "s|/mysite.css\"|/mysite.css?v=$$v\"|g" {} \; ; \
+	find $(BUILD) -name '*.html' -exec $(SED_I) "s|/assets/photo.png\"|/assets/photo.png?v=$$v\"|g" {} \; ; \
 	for cv in CV_general CV_aibackend CV_fullstack CV_general_jp CV_aibackend_jp CV_fullstack_jp; do \
-	  find $(BUILD) -name '*.html' -exec sed -i '' "s|/assets/cv/$$cv.pdf\"|/assets/cv/$$cv.pdf?v=$$v\"|g" {} \; ; \
+	  find $(BUILD) -name '*.html' -exec $(SED_I) "s|/assets/cv/$$cv.pdf\"|/assets/cv/$$cv.pdf?v=$$v\"|g" {} \; ; \
 	done; \
 	for report in icc2026_report; do \
-	  find $(BUILD) -name '*.html' -exec sed -i '' "s|/assets/reports/$$report.pdf\"|/assets/reports/$$report.pdf?v=$$v\"|g" {} \; ; \
+	  find $(BUILD) -name '*.html' -exec $(SED_I) "s|/assets/reports/$$report.pdf\"|/assets/reports/$$report.pdf?v=$$v\"|g" {} \; ; \
 	done
 	@# inject per-page hreflang tags (only for pages that have all 3 language versions)
 	@for page in index publications research experiences skills awards other; do \
 	  for f in $(BUILD)/$$page.html $(BUILD)/fr/$$page.html $(BUILD)/ja/$$page.html; do \
 	    [ -f "$$f" ] || continue; \
-	    sed -i '' "s|<!--HREFLANG-->|<link rel=\"alternate\" hreflang=\"en\" href=\"https://mesabo.github.io/$$page.html\" />\\$$(printf '\n')<link rel=\"alternate\" hreflang=\"fr\" href=\"https://mesabo.github.io/fr/$$page.html\" />\\$$(printf '\n')<link rel=\"alternate\" hreflang=\"ja\" href=\"https://mesabo.github.io/ja/$$page.html\" />\\$$(printf '\n')<link rel=\"alternate\" hreflang=\"x-default\" href=\"https://mesabo.github.io/$$page.html\" />|" "$$f"; \
+	    $(SED_I) "s|<!--HREFLANG-->|<link rel=\"alternate\" hreflang=\"en\" href=\"https://mesabo.github.io/$$page.html\" />\\$$(printf '\n')<link rel=\"alternate\" hreflang=\"fr\" href=\"https://mesabo.github.io/fr/$$page.html\" />\\$$(printf '\n')<link rel=\"alternate\" hreflang=\"ja\" href=\"https://mesabo.github.io/ja/$$page.html\" />\\$$(printf '\n')<link rel=\"alternate\" hreflang=\"x-default\" href=\"https://mesabo.github.io/$$page.html\" />|" "$$f"; \
 	  done; \
 	done
 	@# strip stray <!--HREFLANG--> from any other pages (404 etc.)
-	@find $(BUILD) -name '*.html' -exec sed -i '' 's|<!--HREFLANG-->||g' {} \;
+	@find $(BUILD) -name '*.html' -exec $(SED_I) 's|<!--HREFLANG-->||g' {} \;
 
 gallery:
 	@python3 tools/gen_gallery.py
@@ -80,31 +88,31 @@ $(BUILD):
 $(EN_HTMLS): $(BUILD)/%.html: %.jemdoc MENU $(CONF)
 	@mkdir -p $(BUILD)
 	$(JEMDOC) -c $(CONF) -o $@ $<
-	@sed -i '' -e 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' \
+	@$(SED_I) -e 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' \
 	           -e 's/target="blank"/target="_blank" rel="noopener"/g' \
 	           -e 's|<a href="\(\.\./[^"]*\)" class="current">|<a href="\1">|g' $@
 	@# Strip target="_blank" from internal .html links (jemdoc adds it to body links incorrectly)
-	@sed -i '' -E -e 's|<a href="([^"]+\.html)" target="_blank" rel="noopener">|<a href="\1">|g' $@
+	@$(SED_I) -E -e 's|<a href="([^"]+\.html)" target="_blank" rel="noopener">|<a href="\1">|g' $@
 
 # === French (build/fr/) ===
 $(FR_HTMLS): $(BUILD)/fr/%.html: fr/%.jemdoc fr/MENU $(CONF)
 	@mkdir -p $(BUILD)/fr
 	cd fr && python3 ../tools/jemdoc -c ../$(CONF) -o ../$@ $*.jemdoc
-	@sed -i '' -e 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' \
+	@$(SED_I) -e 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' \
 	           -e 's/target="blank"/target="_blank" rel="noopener"/g' \
 	           -e 's|<a href="\(\.\./[^"]*\)" class="current">|<a href="\1">|g' $@
 	@# Strip target="_blank" from internal .html links (jemdoc adds it to body links incorrectly)
-	@sed -i '' -E -e 's|<a href="([^"]+\.html)" target="_blank" rel="noopener">|<a href="\1">|g' $@
+	@$(SED_I) -E -e 's|<a href="([^"]+\.html)" target="_blank" rel="noopener">|<a href="\1">|g' $@
 
 # === Japanese (build/ja/) ===
 $(JA_HTMLS): $(BUILD)/ja/%.html: ja/%.jemdoc ja/MENU $(CONF)
 	@mkdir -p $(BUILD)/ja
 	cd ja && python3 ../tools/jemdoc -c ../$(CONF) -o ../$@ $*.jemdoc
-	@sed -i '' -e 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' \
+	@$(SED_I) -e 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' \
 	           -e 's/target="blank"/target="_blank" rel="noopener"/g' \
 	           -e 's|<a href="\(\.\./[^"]*\)" class="current">|<a href="\1">|g' $@
 	@# Strip target="_blank" from internal .html links (jemdoc adds it to body links incorrectly)
-	@sed -i '' -E -e 's|<a href="([^"]+\.html)" target="_blank" rel="noopener">|<a href="\1">|g' $@
+	@$(SED_I) -E -e 's|<a href="([^"]+\.html)" target="_blank" rel="noopener">|<a href="\1">|g' $@
 
 $(BUILD)/mysite.css: mysite.css
 	cp mysite.css $(BUILD)/
