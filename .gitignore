@@ -1,0 +1,7 @@
+build/
+.deploy/
+.DS_Store
+*.aux
+*.log
+*.out
+*.toc

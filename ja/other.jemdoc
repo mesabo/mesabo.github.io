@@ -1,0 +1,126 @@
+# jemdoc: menu{MENU}{other.html}, nofooter
+= その他
+
+== オープンソース プロジェクト
+
+公開リポジトリは [https://github.com/mesabo github.com/mesabo]。
+
+~~~
+{}{raw}
+<a href="https://github.com/mesabo" target="_blank" rel="noopener" class="gh-activity-link">
+  <img class="gh-activity" src="https://ghchart.rshah.org/40c463/mesabo" alt="@mesabo の GitHub コントリビューション活動" loading="lazy">
+</a>
+~~~
+
+== 社会貢献と影響
+
+- *メンタリング* --- ESATIC（コートジボワール TIC 高等学校）の学部生 15 名以上; 5 名が日本および海外の大学院に進学。
+- *ボランティア講師* --- 日本の高校 2 校で AI とスマート エネルギー システムに関する招待講義（200+ 名の生徒に到達）。
+- *TICAD9 ブース* --- 第 9 回アフリカ開発会議のブースで [https://www.jica.go.jp/index.html JICA（独立行政法人国際協力機構）] を代表; アフリカのエネルギー・インフラ用途向け生成 AI プロトタイプを実演。
+- *日本／コートジボワール 研究架橋* --- 西アフリカでスマートグリッド耐障害性の能力を育てる長期計画。
+
+== パーソナル
+
+- 2023 年から東京在住、コートジボワール出身。
+- 言語: フランス語（母語）、英語（流暢）、日本語（中級、学習継続中）。
+- 関心: 新興経済圏向けスマート エネルギー システム、若手エンジニアのメンタリング、出荷されるものを作ること。
+
+== 出張・会議
+
+会議とイベントの写真ギャラリー（時系列順、最新が先）。各列は横スクロールで表示されます。
+
+~~~
+{}{raw}
+<!-- GALLERY-AUTO-START -->
+<section class="trip">
+  <h3>IEEE ICC 2026 — Glasgow, UK <span class="trip-date">May 2026</span> <a class="trip-report" href="/assets/reports/icc2026_report.pdf" target="_blank" rel="noopener">report (PDF)</a></h3>
+  <div class="trip-grid">
+    <a class="trip-photo" href="/assets/photos/icc2026_glasgow/01_presentation.jpg" target="_blank" rel="noopener"><img src="/assets/photos/icc2026_glasgow/01_presentation.jpg" alt="icc2026 glasgow — 1" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/icc2026_glasgow/02_conference.jpg" target="_blank" rel="noopener"><img src="/assets/photos/icc2026_glasgow/02_conference.jpg" alt="icc2026 glasgow — 2" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/icc2026_glasgow/03_polarization_talk.jpg" target="_blank" rel="noopener"><img src="/assets/photos/icc2026_glasgow/03_polarization_talk.jpg" alt="icc2026 glasgow — 3" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/icc2026_glasgow/04_glasgow_university.jpg" target="_blank" rel="noopener"><img src="/assets/photos/icc2026_glasgow/04_glasgow_university.jpg" alt="icc2026 glasgow — 4" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/icc2026_glasgow/05_glasgow_city.jpg" target="_blank" rel="noopener"><img src="/assets/photos/icc2026_glasgow/05_glasgow_city.jpg" alt="icc2026 glasgow — 5" loading="lazy" /></a>
+  </div>
+</section>
+
+<section class="trip">
+  <h3>IEEE ICCE 2026 — Dubai, UAE <span class="trip-date">February 2026</span></h3>
+  <div class="trip-grid">
+    <a class="trip-photo" href="/assets/photos/icce2026/01.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/icce2026/01.jpeg" alt="icce2026 — 1" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/icce2026/02.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/icce2026/02.jpeg" alt="icce2026 — 2" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/icce2026/03.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/icce2026/03.jpeg" alt="icce2026 — 3" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/icce2026/04.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/icce2026/04.jpeg" alt="icce2026 — 4" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/icce2026/05.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/icce2026/05.jpeg" alt="icce2026 — 5" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/icce2026/06.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/icce2026/06.jpeg" alt="icce2026 — 6" loading="lazy" /></a>
+  </div>
+</section>
+
+<section class="trip">
+  <h3>TICAD9 — Yokohama, Japan <span class="trip-date">August 2025</span></h3>
+  <div class="trip-grid">
+    <a class="trip-photo" href="/assets/photos/ticad2025/01_ticad_entrance.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/ticad2025/01_ticad_entrance.jpeg" alt="ticad2025 — 1" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/ticad2025/02_booth.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/ticad2025/02_booth.jpeg" alt="ticad2025 — 2" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/ticad2025/03_previous_japan_pm.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/ticad2025/03_previous_japan_pm.jpeg" alt="ticad2025 — 3" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/ticad2025/04_ivorycoast_chamber_rep.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/ticad2025/04_ivorycoast_chamber_rep.jpeg" alt="ticad2025 — 4" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/ticad2025/05_dinner.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/ticad2025/05_dinner.jpeg" alt="ticad2025 — 5" loading="lazy" /></a>
+  </div>
+</section>
+
+<section class="trip">
+  <h3>ICUFN 2025 — Lisbon, Portugal <span class="trip-date">June 2025</span></h3>
+  <div class="trip-grid">
+    <a class="trip-photo" href="/assets/photos/icufn2025/01.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/icufn2025/01.jpeg" alt="icufn2025 — 1" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/icufn2025/02.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/icufn2025/02.jpeg" alt="icufn2025 — 2" loading="lazy" /></a>
+  </div>
+</section>
+
+<section class="trip">
+  <h3>Master’s graduation — Hosei University, Tokyo <span class="trip-date">September 2025</span></h3>
+  <div class="trip-grid">
+    <a class="trip-photo" href="/assets/photos/graduation/01.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/graduation/01.jpeg" alt="graduation — 1" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/graduation/02.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/graduation/02.jpeg" alt="graduation — 2" loading="lazy" /></a>
+  </div>
+</section>
+
+<section class="trip">
+  <h3>IEEE VTC2024-Fall — Washington D.C., USA <span class="trip-date">October 2024</span></h3>
+  <div class="trip-grid">
+    <a class="trip-photo" href="/assets/photos/vtc2024/01.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/vtc2024/01.jpeg" alt="vtc2024 — 1" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/vtc2024/02.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/vtc2024/02.jpeg" alt="vtc2024 — 2" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/vtc2024/03.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/vtc2024/03.jpeg" alt="vtc2024 — 3" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/vtc2024/04.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/vtc2024/04.jpeg" alt="vtc2024 — 4" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/vtc2024/05.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/vtc2024/05.jpeg" alt="vtc2024 — 5" loading="lazy" /></a>
+  </div>
+</section>
+
+<section class="trip">
+  <h3>JICA international-understanding event — Igusa High School <span class="trip-date">2025</span></h3>
+  <div class="trip-grid">
+    <a class="trip-photo" href="/assets/photos/jica_event/01_igusa_high_school_session1.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/jica_event/01_igusa_high_school_session1.jpeg" alt="jica event — 1" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/jica_event/02_igusa_high_school_session2.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/jica_event/02_igusa_high_school_session2.jpeg" alt="jica event — 2" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/jica_event/03_jica_networking_fair_2024.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/jica_event/03_jica_networking_fair_2024.jpeg" alt="jica event — 3" loading="lazy" /></a>
+  </div>
+</section>
+<!-- GALLERY-AUTO-END -->
+~~~
+
+== 趣味
+
+キーボードを離れた東京生活 --- 食事、音楽、散歩、ゲーム。
+
+~~~
+{}{raw}
+<!-- HOBBIES-AUTO-START -->
+<section class="trip">
+  <div class="trip-grid">
+    <a class="trip-photo" href="/assets/photos/hobbies/01_sakura.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/hobbies/01_sakura.jpeg" alt="hobbies — 1" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/hobbies/02_shinjuku.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/hobbies/02_shinjuku.jpeg" alt="hobbies — 2" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/hobbies/03_osaka_nara_park.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/hobbies/03_osaka_nara_park.jpeg" alt="hobbies — 3" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/hobbies/04_japanese_cuisine_1.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/hobbies/04_japanese_cuisine_1.jpeg" alt="hobbies — 4" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/hobbies/05_japanese_cuisine_2.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/hobbies/05_japanese_cuisine_2.jpeg" alt="hobbies — 5" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/hobbies/06_playing_burkina_faso_balafon.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/hobbies/06_playing_burkina_faso_balafon.jpeg" alt="hobbies — 6" loading="lazy" /></a>
+    <a class="trip-photo" href="/assets/photos/hobbies/07_video_game.jpeg" target="_blank" rel="noopener"><img src="/assets/photos/hobbies/07_video_game.jpeg" alt="hobbies — 7" loading="lazy" /></a>
+  </div>
+</section>
+<!-- HOBBIES-AUTO-END -->
+~~~

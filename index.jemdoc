@@ -1,0 +1,67 @@
+# jemdoc: menu{MENU}{index.html}, nofooter
+= About me
+
+~~~
+{}{raw}
+<script>document.body.classList.add('page-index');</script>
+<div class="hero">
+  <img src="/assets/photo.png" alt="Messou Franck Junior Aboya" class="avatar" />
+  <div class="hero-text">
+    <h1 class="hero-name">Franck Junior Aboya <span class="surname">MESSOU</span></h1>
+    <p class="title">PhD candidate &middot; Applied Informatics</p>
+    <p class="affiliation">
+      Graduate School of Science and Engineering &middot; <strong><a href="https://iist.hosei.ac.jp/2025/10/20/associate-professor-keping-yu-recognized-as-one-of-the-worlds-top-2-scientists-by-stanford-university-and-elsevier-2025-edition/" target="_blank" rel="noopener">YuLab</a></strong><br />
+      <a href="https://www.hosei.ac.jp" target="_blank" rel="noopener">Hosei University</a> &middot;
+      <a href="https://iist.hosei.ac.jp" target="_blank" rel="noopener">IIST Koganei Campus</a>, Tokyo
+    </p>
+    <div class="facet-tags">
+      <span>Researcher</span>
+      <span>AI / Backend Engineer</span>
+      <span>Full-stack Engineer</span>
+    </div>
+  </div>
+</div>
+~~~
+
+I am a doctoral researcher at the YuLab, Graduate School of Science and Engineering (Applied Informatics), Hosei University, IIST Koganei Campus. My work develops *AI*, *small / large language model (sLM / LLM)*, and *IoT* methods for the stability and resilience of *smart grids* and *IoT systems*, with a focus on time-series forecasting, spectral reprogramming, and graph-based control. All experiments run on dedicated multi-GPU servers I provision and maintain.
+
+Outside research, I build production *AI / backend systems* and *full-stack web and mobile applications*.
+
+== Research focus
+
+- AI / sLM / LLM for power-system stability and grid resilience
+- Spectral reprogramming of frozen *small language models (sLM)* and LLMs for time-series tasks
+- *IoT* and edge intelligence for distributed energy resources
+- Co-optimization of energy dispatch and communication routing
+- Graph neural networks over electrical-grid topologies
+- Federated learning, knowledge distillation across IoT-edge devices
+
+== Engineering focus
+
+~~~
+{}{raw}
+<ul>
+  <li>Production ML pipelines (training, inference, deployment) on <strong>dedicated GPU servers</strong> <span class="ico"><img src="/assets/icons/nvidia.svg" alt=""></span> <span class="ico"><img src="/assets/icons/pytorch.svg" alt=""></span></li>
+  <li><strong>IoT</strong> data ingestion and edge model deployment</li>
+  <li>Backend services in <span class="ico"><img src="/assets/icons/python.svg" alt=""> Python</span> (<span class="ico"><img src="/assets/icons/flask.svg" alt=""> Flask</span>, <span class="ico"><img src="/assets/icons/fastapi.svg" alt=""> FastAPI</span>) and <span class="ico"><img src="/assets/icons/nodedotjs.svg" alt=""> Node.js</span>, with REST and <span class="ico"><img src="/assets/icons/graphql.svg" alt=""> GraphQL</span></li>
+  <li>Data layers: <span class="ico"><img src="/assets/icons/mongodb.svg" alt=""> MongoDB</span> · <span class="ico"><img src="/assets/icons/postgresql.svg" alt=""> PostgreSQL</span> · <span class="ico"><img src="/assets/icons/mysql.svg" alt=""> MySQL</span></li>
+  <li>Frontend (<span class="ico"><img src="/assets/icons/react.svg" alt=""> React</span>) and mobile (<span class="ico"><img src="/assets/icons/flutter.svg" alt=""> Flutter</span> / <span class="ico"><img src="/assets/icons/dart.svg" alt=""> Dart</span>)</li>
+  <li>Cloud: <span class="ico"><img src="/assets/icons/googlecloud.svg" alt=""> Google Cloud</span> · containers with <span class="ico"><img src="/assets/icons/docker.svg" alt=""> Docker</span> · CI with <span class="ico"><img src="/assets/icons/githubactions.svg" alt=""> GitHub Actions</span></li>
+</ul>
+~~~
+
+== Highlights
+
+- *2 Q1 journal papers* in 2026 ([https://www.sciencedirect.com/journal/internet-of-things Internet of Things], IF 7.6 / [https://www.sciencedirect.com/journal/expert-systems-with-applications Expert Systems with Applications], IF 7.5) on *IoT* time-series and *sLM*-based forecasting.
+- *5 first-authored* IEEE flagship conference papers (VTC, ICUFN, ICCE, ICC).
+- *★ IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award* at VTC2024-Fall, Washington D.C.
+- Reviewer for /Theoretical Computer Science/ (Elsevier); Review Committee Member, IEEE ICECET 2026 (Rome, IEEE Italy Section).
+- Validation of smart-grid co-optimization on benchmarks up to *2,869-bus PEGASE*, all on a dedicated GPU server.
+
+== Where to go next
+
+- [publications.html Publications] --- 2 Q1 journals + 8 IEEE flagship conferences
+- [research.html Research] --- current PhD project + spectral-reprogramming track
+- [experiences.html Experience] --- career + downloadable CVs (AI / SE, EN / JP)
+- [awards.html Awards] --- VTS 2024 Student Paper Award and service appointments
+- [other.html Other] --- open-source projects, mentorship, travels and photos
