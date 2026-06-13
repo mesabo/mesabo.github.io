@@ -57,4 +57,4 @@ Three muted facet colours used sparingly across the site:
 - **GitHub** — [@mesabo](https://github.com/mesabo)
 - **LinkedIn** — [/in/mesabo](https://www.linkedin.com/in/mesabo/)
 - **Google Scholar** — [Franck Junior Aboya Messou](https://scholar.google.com/citations?user=tHBBTIEAAAAJ)
-- **Email** — [mesabo18@gmail.com](mailto:mesabo18@gmail.com)
+- **Email** — [franckaboya99@gmail.com](mailto:franckaboya99@gmail.com)
