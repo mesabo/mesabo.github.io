@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,14 +7,14 @@
 <meta name="description" content="Franck Junior Aboya MESSOU — PhD researcher at Hosei University YuLab, working on AI/LLM methods for smart-grid stability and IoT systems. Also full-stack and AI/backend engineer." />
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-<link rel="alternate icon" type="image/png" href="/assets/photo.png?v=202606141355" />
-<link rel="apple-touch-icon" href="/assets/photo.png?v=202606141355" />
+<link rel="alternate icon" type="image/png" href="/assets/photo.png?v=202606141730" />
+<link rel="apple-touch-icon" href="/assets/photo.png?v=202606141730" />
 <meta property="og:type" content="profile" />
 <meta property="og:site_name" content="Franck Junior Aboya MESSOU" />
 <meta property="og:title" content="Franck Junior Aboya MESSOU — PhD researcher (Hosei YuLab) · AI / Backend / Full-stack engineer" />
 <meta property="og:description" content="AI / sLM / LLM methods for smart-grid stability and IoT systems. 2 Q1 journal papers, 5 IEEE flagship first-author papers, IEEE VTS 2024 Student Paper Award." />
 <meta property="og:url" content="https://mesabo.github.io/" />
-<meta property="og:image" content="https://mesabo.github.io/assets/photo.png?v=202606141355" />
+<meta property="og:image" content="https://mesabo.github.io/assets/photo.png?v=202606141730" />
 <meta property="og:image:alt" content="Franck Junior Aboya MESSOU" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:locale:alternate" content="fr_FR" />
@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Franck Junior Aboya MESSOU — PhD researcher · Engineer" />
 <meta name="twitter:description" content="AI / sLM / LLM for smart-grid stability and IoT systems. Hosei University YuLab." />
-<meta name="twitter:image" content="https://mesabo.github.io/assets/photo.png?v=202606141355" />
+<meta name="twitter:image" content="https://mesabo.github.io/assets/photo.png?v=202606141730" />
 <meta name="theme-color" content="#fafafb" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#1c1d24" media="(prefers-color-scheme: dark)" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,7 +39,7 @@
     } catch (e) {}
   })();
 </script>
-<link rel="stylesheet" href="/mysite.css?v=202606141355" type="text/css" />
+<link rel="stylesheet" href="/mysite.css?v=202606141730" type="text/css" />
 <title>Compétences · Franck Junior Aboya MESSOU</title>
 </head>
 <body>
@@ -64,15 +64,24 @@
       var href = (current.getAttribute('href') || '').replace('.html', '').replace(/[^a-z0-9]/gi, '');
       if (href) document.body.classList.add('page-' + href);
     }
-    // mark language-section menu items so we can grayscale non-current flags
+    // mark language-section menu items + point each language link at the CURRENT page
     var inLang = false;
     var nodes = document.querySelectorAll('#layout-menu-inner > div');
     var langLabels = ['language', 'langue', '言語'];
+    var path = location.pathname.replace(/^\/+/, '');   // "en/experiences.html" | "experiences.html" | ""
+    var page = path.replace(/^(en|fr)\//, '');          // strip the language prefix
+    if (!page || page === 'index.html') page = 'index.html';
     nodes.forEach(function (el) {
       if (el.classList.contains('menu-category')) {
         inLang = langLabels.indexOf(el.textContent.trim().toLowerCase()) !== -1;
       } else if (inLang && el.classList.contains('menu-item')) {
         el.classList.add('menu-item-lang');
+        var a = el.querySelector('a');
+        if (a) {
+          if (a.textContent.indexOf('English') > -1) a.setAttribute('href', '/en/' + page);
+          else if (a.textContent.indexOf('Fran') > -1) a.setAttribute('href', '/fr/' + page);
+          else if (a.textContent.indexOf('日本語') > -1) a.setAttribute('href', '/' + page);
+        }
       }
     });
   })();
@@ -268,14 +277,30 @@
   <a href="https://www.linkedin.com/in/mesabo/" target="_blank" rel="noopener">LinkedIn</a>
 </p>
 <footer id="site-footer">
-  <span>Updated <span class="build-date">2026-06</span></span>
+  <span>Mis à jour <span class="build-date">2026-06</span></span>
   <span class="footer-sep">·</span>
   <span><a href="https://github.com/mesabo/profile">source</a></span>
   <span class="footer-sep">·</span>
-  <span>built with <a href="http://jemdoc.jaboc.net/">jemdoc</a></span>
-  <span class="footer-sep">·</span>
-  <span><a href="https://hits.sh/mesabo.github.io/2026/" target="_blank" rel="noopener"><img src="https://hits.sh/mesabo.github.io/2026.svg?style=flat-square&label=page%20views&color=1f3a5f&labelColor=2e2e2e" alt="total page views" style="vertical-align:middle;height:16px;" /></a></span>
+  <span><a href="http://jemdoc.jaboc.net/">jemdoc</a></span>
+  <span class="footer-sep footer-visits-sep" hidden>·</span>
+  <span class="footer-visits" hidden>visiteurs <span id="gc-count"></span></span>
 </footer>
 </main>
+<!-- GoatCounter: privacy-friendly analytics, counts UNIQUE visitors (no cookies). Requires registering mesabo.goatcounter.com and enabling "Allow adding visitor counts on your website". -->
+<script data-goatcounter="https://mesabo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+  (function () {
+    fetch('https://mesabo.goatcounter.com/counter/TOTAL.json')
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (d) {
+        if (!d || d.count == null) return;
+        var el = document.getElementById('gc-count');
+        if (!el) return;
+        el.textContent = d.count;
+        document.querySelectorAll('.footer-visits, .footer-visits-sep').forEach(function (n) { n.hidden = false; });
+      })
+      .catch(function () {});
+  })();
+</script>
 </body>
 </html>
